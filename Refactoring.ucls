@@ -3,8 +3,8 @@
   associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="kr.or.dgit.refactoring.Movie" project="Refactoring_Study" 
     file="/Refactoring_Study/src/kr/or/dgit/refactoring/Movie.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="234" x="253" y="124"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+    <position height="225" width="234" x="142" y="120"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -12,8 +12,8 @@
   </class>  
   <class id="2" language="java" name="kr.or.dgit.refactoring.Rental" project="Refactoring_Study" 
     file="/Refactoring_Study/src/kr/or/dgit/refactoring/Rental.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="184" x="663" y="148"/>    
-    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+    <position height="176" width="184" x="626" y="148"/>    
+    <display autosize="false" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -22,7 +22,7 @@
   <class id="3" language="java" name="kr.or.dgit.refactoring.Customer" project="Refactoring_Study" 
     file="/Refactoring_Study/src/kr/or/dgit/refactoring/Customer.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1051" y="236"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -44,7 +44,11 @@
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+  <dependency id="10">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
     <operations public="true" package="true" protected="true" private="true" static="true"/>  
