@@ -494,7 +494,7 @@
 </XPD:OBJ>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:ATTR name="#OwnedElements" type="integer">15</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">16</XPD:ATTR>
 <XPD:OBJ name="OwnedElements[0]" type="UMLClass" guid="zPw4OCg8SEae+ocGwnB5/wAA">
 <XPD:ATTR name="Name" type="string">Movie</XPD:ATTR>
 <XPD:REF name="Namespace">zh2hm/2xh0q5caExbndtXwAA</XPD:REF>
@@ -967,6 +967,10 @@
 <XPD:REF name="Views[1]">pf3knRNsG023oaSEnn0irgAA</XPD:REF>
 <XPD:REF name="Views[2]">2rrv+9ewkkO6l+PGN2OqWwAA</XPD:REF>
 <XPD:REF name="Views[3]">k3SK43vJh0usr3I5O0JSCwAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[15]" type="UMLInterface" guid="uX77rOeZe0u/em7Y7EW8zgAA">
+<XPD:ATTR name="Name" type="string">Lim, Heejin</XPD:ATTR>
+<XPD:REF name="Namespace">zh2hm/2xh0q5caExbndtXwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:ATTR name="#OwnedCollaborationInstanceSets" type="integer">1</XPD:ATTR>
 <XPD:OBJ name="OwnedCollaborationInstanceSets[0]" type="UMLCollaborationInstanceSet" guid="uVDJtzzFaEGcPjumsXlQ6QAA">
