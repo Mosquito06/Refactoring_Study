@@ -25,6 +25,6 @@ public class HtmlStatement extends Statement {
 	}
 	@Override
 	protected String headerString(String customerName) {
-		return String.format("<H1><EM>%s 고객님의 대여기록 </EM></H1><p>\\n", customerName);
+		return String.format("<H1><EM>%s 고객님의 대여기록 </EM></H1><p>%n", customerName);
 	}
 }

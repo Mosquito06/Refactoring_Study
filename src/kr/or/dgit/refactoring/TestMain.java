@@ -16,7 +16,6 @@ public class TestMain {
 		Movie mn1 = new Movie("곡성", MovieKind.NEW_RELEASE);
 		Movie mn2 = new Movie("인디펜던스데이", MovieKind.NEW_RELEASE);
 		Movie ma1 = new Movie("범죄도시", MovieKind.ACTION);
-		Movie ma2 = new Movie("토르", MovieKind.ACTION);
 		
 		Rental r1 = new Rental(mc1, 3);
 		Rental r2 = new Rental(mc2, 4);
@@ -37,14 +36,28 @@ public class TestMain {
 		c1.addRental(r4);
 		c1.addRental(r6);
 		
+		Customer c2 = new Customer("배재진");
+		c2.addRental(r3);
+		c2.addRental(r7);
+		c2.addRental(r6);
+		
 		System.out.println(c.statement(ResultType.TEXT));
 		System.out.println();
 		System.out.println(c1.statement(ResultType.TEXT));
+		System.out.println();
+		System.out.println(c2.statement(ResultType.TEXT));
 		System.out.println("========================");
 		System.out.println(c.statement(ResultType.HTML));
 		System.out.println();
 		System.out.println(c1.statement(ResultType.HTML));
+		System.out.println();
+		System.out.println(c2.statement(ResultType.HTML));
 		System.out.println("========================");
+		System.out.println(c.statement(ResultType.XML));
+		System.out.println();
+		System.out.println(c1.statement(ResultType.XML));
+		System.out.println();
+		System.out.println(c2.statement(ResultType.XML));
 	}
 
 }

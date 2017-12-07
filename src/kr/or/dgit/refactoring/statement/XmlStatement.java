@@ -17,17 +17,18 @@ public class XmlStatement extends Statement {
 	
 	@Override
 	protected String footerString(Customer acustomer) {
-		return null;
+		return String.format("<TotalPrice> 누적 대여료 : %s</TotalPrice>%n <TotalPoint> 적립 포인트 : %s </TotalPoint>", acustomer.getTotalCharge(),
+				acustomer.getTotalFrequentRenterPoints());
 	}
 
 	@Override
 	protected String eachRentalString(Rental aeach) {
-		return null;
+		return String.format("<Movie> %s </Movie> : <Price> %s </Price>%n", aeach.getMovie().getTitle(), aeach.getCharge());
 	}
 
 	@Override
 	protected String headerString(String customerName) {
-		return null;
+		return String.format("<Customer> %s 고객님의 대여기록 </Customer>%n", customerName);
 	}
 
 }
