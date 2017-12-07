@@ -4,9 +4,21 @@ import kr.or.dgit.refactoring.Customer;
 import kr.or.dgit.refactoring.Rental;
 
 public class TextStatement extends Statement {
+
+	public static final TextStatement INSTANCE = new TextStatement();
+
+	public static TextStatement getInstance() {
+		return INSTANCE;
+	}
+
+	private TextStatement() {
+		super();
+	}
+
 	@Override
 	protected String footerString(Customer acustomer) {
-		return String.format("누적 대여료 : %s%n 적립 포인트 : %s", acustomer.getTotalCharge(), acustomer.getTotalFrequentRenterPoints());
+		return String.format("누적 대여료 : %s%n 적립 포인트 : %s", acustomer.getTotalCharge(),
+				acustomer.getTotalFrequentRenterPoints());
 	}
 
 	@Override

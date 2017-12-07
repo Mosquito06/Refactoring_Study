@@ -1,7 +1,18 @@
 package kr.or.dgit.refactoring.price;
 
 public class NewReleasePrice extends Price {
+	
+	public static final NewReleasePrice INSTANCE = new NewReleasePrice();
 
+	public static NewReleasePrice getInstance() {
+		return INSTANCE;
+	}
+
+	private NewReleasePrice() {
+		super();
+	}
+	
+	
 	@Override
 	public MovieKind getPriceCode() {
 		return MovieKind.NEW_RELEASE;

@@ -1,7 +1,17 @@
 package kr.or.dgit.refactoring.price;
 
 public class RegularPrice extends Price {
+	
+	public static final RegularPrice INSTANCE = new RegularPrice();
 
+	public static RegularPrice getInstance() {
+		return INSTANCE;
+	}
+
+	private RegularPrice() {
+		super();
+	}
+	
 	@Override
 	public MovieKind getPriceCode() {
 		return MovieKind.REGULAR;

@@ -3,10 +3,8 @@ package kr.or.dgit.refactoring;
 import java.util.ArrayList;
 import java.util.List;
 
-import kr.or.dgit.refactoring.statement.HtmlStatement;
-import kr.or.dgit.refactoring.statement.Statement;
+import kr.or.dgit.refactoring.statement.ResultType;
 import kr.or.dgit.refactoring.statement.StatementFactory;
-import kr.or.dgit.refactoring.statement.TextStatement;
 
 public class Customer {
 	private String name;
@@ -29,7 +27,7 @@ public class Customer {
 		return rentals;
 	}
 
-	public String statement(int isText) {
+	public String statement(ResultType isText) {
 		return StatementFactory.getStatement(isText).value(this);
 	}
 

@@ -1,11 +1,19 @@
 package kr.or.dgit.refactoring.statement;
 
-import java.util.List;
-
 import kr.or.dgit.refactoring.Customer;
 import kr.or.dgit.refactoring.Rental;
 
 public class HtmlStatement extends Statement {
+	public static final HtmlStatement INSTANCE = new HtmlStatement();
+
+	public static HtmlStatement getInstance() {
+		return INSTANCE;
+	}
+
+	private HtmlStatement() {
+		super();
+	}
+	
 	@Override
 	protected String footerString(Customer acustomer) {
 		return String.format("<p>누적 대여료 : <EM>%s</EM>%n<p>적립 포인트 : <EM> %s </EM><p>", acustomer.getTotalCharge(), 

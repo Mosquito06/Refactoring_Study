@@ -6,7 +6,7 @@ import kr.or.dgit.refactoring.price.PriceFactory;
 
 public class Movie {
 	private String title;
-	private Price price;
+	private Price price;	
 
 	public Movie(String title, MovieKind priceCode) {
 		super();

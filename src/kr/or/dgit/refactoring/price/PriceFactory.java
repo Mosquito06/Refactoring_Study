@@ -5,13 +5,16 @@ public class PriceFactory {
 		Price price = null;
 		switch(aPriceCode) {
 		case REGULAR:
-			price = new RegularPrice();
+			price = RegularPrice.getInstance();
 			break;
 		case CHILDRENS:
-			price = new ChildrenPrice();
+			price = ChildrenPrice.getInstance();
 			break;
 		case NEW_RELEASE:
-			price = new NewReleasePrice();
+			price = NewReleasePrice.getInstance();
+			break;
+		case ACTION:
+			price = ActionPrice.getInstance();
 			break;
 		default:
 			throw new IllegalArgumentException("가격 코드가 잘못 됐습니다.");
