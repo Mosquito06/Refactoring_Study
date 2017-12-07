@@ -1,25 +1,25 @@
 package kr.or.dgit.refactoring;
 
+import kr.or.dgit.refactoring.price.MovieKind;
+import kr.or.dgit.refactoring.price.Price;
+import kr.or.dgit.refactoring.price.PriceFactory;
+
 public class Movie {
-	public static final int REGULAR = 0;
-	public static final int NEW_RELEASE = 1;
-	public static final int CHILDRENS = 2;
-
 	private String title;
-	private int priceCode;
+	private Price price;
 
-	public Movie(String title, int priceCode) {
+	public Movie(String title, MovieKind priceCode) {
 		super();
 		this.title = title;
-		this.priceCode = priceCode;
+		setPriceCode(priceCode);
 	}
 
-	public int getPriceCode() {
-		return priceCode;
+	public MovieKind getPriceCode() {
+		return price.getPriceCode();
 	}
 
-	public void setPriceCode(int priceCode) {
-		this.priceCode = priceCode;
+	public void setPriceCode(MovieKind aPriceCode) {
+		price = PriceFactory.getFactory(aPriceCode);
 	}
 
 	public String getTitle() {
@@ -27,30 +27,11 @@ public class Movie {
 	}
 	
 	public double getCharge(int aDaysRented) {
-		double result = 0;
-		
-		switch(getPriceCode()) {
-		case Movie.REGULAR:
-			result += 2;
-			if(aDaysRented > 2) {
-				result += (aDaysRented - 2) * 1.5;
-			}
-			break;
-		case Movie.NEW_RELEASE:
-			result += aDaysRented * 3;
-			break;
-		case Movie.CHILDRENS:
-			result += 1.5;
-			if(aDaysRented >3) {
-				result += (aDaysRented - 3) *1.5;
-			}
-			break;
-		}
-		return result;
+		return price.getCharge(aDaysRented);
 	}
 	
 	public int getFrequentRenterPoints(int aDaysRented) {
-		if((getPriceCode() == Movie.NEW_RELEASE) && aDaysRented > 1) {
+		if((getPriceCode() == MovieKind.NEW_RELEASE) && aDaysRented > 1) {
 			return 2;
 		}else {
 			return 1;

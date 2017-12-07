@@ -1,14 +1,19 @@
 package kr.or.dgit.refactoring;
 
+import kr.or.dgit.refactoring.price.MovieKind;
+
 public class TestMain {
 
 	public static void main(String[] args) {
-		Movie mc1 =new Movie("니모를 찾아서", Movie.CHILDRENS);
-		Movie mc2 = new Movie("말레피센트", Movie.CHILDRENS);
-		Movie mr1 = new Movie("명량", Movie.REGULAR);
-		Movie mr2 = new Movie("변호사", Movie.REGULAR);
-		Movie mn1 = new Movie("곡성", Movie.NEW_RELEASE);
-		Movie mn2 = new Movie("인디펜던스데이", Movie.NEW_RELEASE);
+		// Movie 액션물을 추가, 대여기간이 2일까지, $4, 이후 초과 일수에 $2 추가
+		// 대여현황을 xml로 출력되는 기능을 추가하시오.		
+		
+		Movie mc1 =new Movie("니모를 찾아서", MovieKind.CHILDRENS);
+		Movie mc2 = new Movie("말레피센트", MovieKind.CHILDRENS);
+		Movie mr1 = new Movie("명량", MovieKind.REGULAR);
+		Movie mr2 = new Movie("변호사", MovieKind.REGULAR);
+		Movie mn1 = new Movie("곡성", MovieKind.NEW_RELEASE);
+		Movie mn2 = new Movie("인디펜던스데이", MovieKind.NEW_RELEASE);
 		
 		Rental r1 = new Rental(mc1, 3);
 		Rental r2 = new Rental(mc2, 4);
@@ -27,13 +32,13 @@ public class TestMain {
 		c1.addRental(r4);
 		c1.addRental(r6);
 		
-		System.out.println(c.statement());
+		System.out.println(c.statement(0));
 		System.out.println();
-		System.out.println(c1.statement());
+		System.out.println(c1.statement(0));
 		System.out.println("========================");
-		System.out.println(c.htmlStatement());
+		System.out.println(c.statement(1));
 		System.out.println();
-		System.out.println(c1.htmlStatement());
+		System.out.println(c1.statement(1));
 	}
 
 }

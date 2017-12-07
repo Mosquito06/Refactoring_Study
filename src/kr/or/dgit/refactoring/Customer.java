@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kr.or.dgit.refactoring.statement.HtmlStatement;
+import kr.or.dgit.refactoring.statement.Statement;
+import kr.or.dgit.refactoring.statement.StatementFactory;
 import kr.or.dgit.refactoring.statement.TextStatement;
 
 public class Customer {
@@ -27,12 +29,8 @@ public class Customer {
 		return rentals;
 	}
 
-	public String statement() {
-		return new TextStatement().value(this);
-	}
-
-	public String htmlStatement() {
-		return new HtmlStatement().value(this);
+	public String statement(int isText) {
+		return StatementFactory.getStatement(isText).value(this);
 	}
 
 	public double getTotalFrequentRenterPoints() {

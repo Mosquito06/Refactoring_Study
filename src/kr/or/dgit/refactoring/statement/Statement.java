@@ -6,6 +6,10 @@ import kr.or.dgit.refactoring.Customer;
 import kr.or.dgit.refactoring.Rental;
 
 public abstract class Statement {
+	public static final int TEXT = 0;
+	public static final int HTML = 1;
+	
+	
 	public String value(Customer customer) {
 		List<Rental> rentals = customer.getRentals();
 		
